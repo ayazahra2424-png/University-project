@@ -1,0 +1,37 @@
+
+package edu.zuj.week1.lactuer1;
+
+import java.util.Scanner;
+
+
+public class Task3 {
+    public static void main(String[] args) {
+         Scanner s=new Scanner(System.in);
+        System.out.println("Enter n1 : ");
+        int n1=s.nextInt();
+        System.out.println("Enter n2 :");
+        int n2=s.nextInt();  
+        System.out.println("================");
+        System.out.println("1- Add");
+        System.out.println("2- Sub");
+        System.out.println("3- Mul");
+        System.out.println("4- Div");
+        System.out.println("5- Quit");
+        System.out.println("================");
+        System.out.println("Enter your choice");
+        int ch=s.nextInt();
+        int result=0;
+        switch(ch){
+            case 1:result=n1+n2;break;
+            case 2:result=n1-n2;break;
+            case 3:result=n1*n2;break;
+            case 4:result=n1/n2;break;
+            case 5:System.out.println("Good bye");break;
+            default:System.out.println("Invalid choice");
+            
+        } 
+           if(ch<=4) { 
+               System.out.println("Result="+result);
+               
+    }
+}
