@@ -1,0 +1,105 @@
+
+package edu.zuj.week6.lactuer.oop;
+
+public class Employee {
+  private int id;
+  private String name;
+  private int basic; 
+  private int deduction;
+  private int allownces;
+
+    public Employee(int id, String name, int basic, int deduction, int allownces) {
+        this.id = id;
+        this.name = name;
+        this.basic = basic;
+        this.deduction = deduction;
+        this.allownces = allownces;
+    }
+
+    public Employee() {
+    }
+  
+    public int calculateTotalSalary(){
+      int total=basic-deduction+allownces;
+      return total;
+   
+  
+}
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getBasic() {
+        return basic;
+    }
+
+    public void setBasic(int basic) {
+        this.basic = basic;
+    }
+
+    public int getDeduction() {
+        return deduction;
+    }
+
+    public void setDeduction(int deduction) {
+        this.deduction = deduction;
+    }
+
+    public int getAllownces() {
+        return allownces;
+    }
+
+    public void setAllownces(int allownces) {
+        this.allownces = allownces;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" + "id=" + id + ", name=" + name + ", basic=" + basic + ", deduction=" + deduction + ", allownces=" + allownces + '}';
+    }
+    
+}
+
+package edu.zuj.week6.lactuer.oop;
+
+import java.util.Scanner;
+
+public class EmployeeTest {
+    public static void main(String[] args) {
+        Employee e1 = new Employee(10, "Ata" ,500,100,75);
+        System.out.println(e1);
+        System.out.println(e1.calculateTotalSalary());
+        
+        Employee e2=new Employee(15, "jamal",700, 90,25);
+        System.out.println(e2);
+        System.out.println(e2.calculateTotalSalary());
+        
+        Scanner s=new Scanner(System.in);
+        Employee e3=new Employee();
+        System.out.println("Enter name : ");
+        e3.setName(s.next());
+        System.out.println("Enter id : ");
+        e3.setId(s.nextInt());
+        System.out.println("Enter basic : ");
+        e3.setBasic(s.nextInt());
+        System.out.println("Enter deduction : ");
+        e3.setDeduction(s.nextInt());
+        System.out.println("Enter allownces : ");
+        e3.setAllownces(s.nextInt());
+        System.out.println(e3);
+        System.out.println(e3.calculateTotalSalary());
+    }
+}
